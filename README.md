@@ -18,18 +18,18 @@ Under **Settings → Environment Variables** add `INQUIRY_WEBHOOK_URL` (see belo
 
 ## Where things live
 
-| What | Where |
-| --- | --- |
-| All homepage copy, links, phone numbers, testimonials | `src/data/site.ts` |
-| Sections (hero, results, services, …) | `src/components/sections/` |
-| Header, menu, footer, floating buttons | `src/components/layout/` |
-| Shared UI (glass button, carousel, reveals) | `src/components/ui/` |
-| Images & video | `public/media/` |
-| Colours, glass styles, form controls | `src/app/globals.css` |
+| What                                                  | Where                      |
+| ----------------------------------------------------- | -------------------------- |
+| All homepage copy, links, phone numbers, testimonials | `src/data/site.ts`         |
+| Sections (hero, results, services, …)                 | `src/components/sections/` |
+| Header, menu, footer, floating buttons                | `src/components/layout/`   |
+| Shared UI (glass button, carousel, reveals)           | `src/components/ui/`       |
+| Images & video                                        | `public/media/`            |
+| Colours, glass styles, form controls                  | `src/app/globals.css`      |
 
 ## Before going live
 
-- **Display font.** The old site served a Fontspring *demo* build of "quichesans",
+- **Display font.** The old site served a Fontspring _demo_ build of "quichesans",
   which is not licensed for production, so it is not included. Headings currently
   use Marcellus. After buying a webfont licence, put the file at
   `public/fonts/quichesans-regular.woff2` and uncomment the `@font-face` block at the
@@ -57,3 +57,5 @@ Under **Settings → Environment Variables** add `INQUIRY_WEBHOOK_URL` (see belo
   Edge and Firefox ignore. To blur everywhere, delete the two
   `-webkit-backdrop-filter` lines in `globals.css` (the build re-adds the prefix for
   Safari). Expect a GPU cost on scroll, especially on phones.
+
+Easy lemon squizy
