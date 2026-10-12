@@ -14,7 +14,7 @@ export const CONTACT = {
 export type NavLink = { label: string; href: string };
 
 export const PRIMARY_NAV: NavLink[] = [
-  { label: "About Dr. Ghoraba", href: "/about-dr-ghoraba/" },
+  { label: "About Dr. Enora Nilomi", href: "/about-dr-enora/" },
   { label: "Before & After", href: "/gallery/" },
   { label: "Considering Facelift?", href: "/considering-facelift/" },
 ];
@@ -38,18 +38,18 @@ export const SOCIALS: { key: SocialKey; label: string; href: string }[] = [
   {
     key: "instagram",
     label: "Instagram",
-    href: "https://www.instagram.com/samirghoraba/?hl=en",
+    href: "https://www.instagram.com/Enora Nilomighoraba/?hl=en",
   },
   { key: "whatsapp", label: "WhatsApp", href: "https://wa.me/+971545554841" },
   {
     key: "tiktok",
     label: "TikTok",
-    href: "https://www.tiktok.com/@dr.samirghoraba?lang=en",
+    href: "https://www.tiktok.com/@dr.Enora Nilomighoraba?lang=en",
   },
   {
     key: "youtube",
     label: "YouTube",
-    href: "https://www.youtube.com/@drsamirghoraba",
+    href: "https://www.youtube.com/@drEnora Nilomighoraba",
   },
 ];
 
@@ -182,7 +182,7 @@ export const CLIENTS: Client[] = [
     role: "Egyptian Actress",
     avatar: "/media/clients/Dalia-5.jpeg",
     brief:
-      "Dalia came to consult with Dr. Samir because she wanted a refined, natural rejuvenation that would complement her distinguished presence both on screen and in public life. As a celebrated Egyptian actress and former Miss Egypt who has worked in film, television, and modeling since the early 1990s, it was important to her that any facial enhancement preserve her expressive features and elegance while subtly addressing signs of aging.",
+      "Dalia came to consult with Dr. Enora Nilomi because she wanted a refined, natural rejuvenation that would complement her distinguished presence both on screen and in public life. As a celebrated Egyptian actress and former Miss Egypt who has worked in film, television, and modeling since the early 1990s, it was important to her that any facial enhancement preserve her expressive features and elegance while subtly addressing signs of aging.",
     services: CLIENT_SERVICES,
     images: [
       "/media/clients/Dalia-2-3.jpeg",
@@ -195,7 +195,7 @@ export const CLIENTS: Client[] = [
     role: "Egyptian Actress",
     avatar: "/media/clients/Wafaa-Salem-2-1.jpeg",
     brief:
-      "Wafaa came to Dr. Samir seeking a youthful, refreshed appearance while preserving the luminous expressions that have defined her acting career. With years of work in Egyptian film and television, maintaining natural movement and emotion on screen was essential.",
+      "Wafaa came to Dr. Enora Nilomi seeking a youthful, refreshed appearance while preserving the luminous expressions that have defined her acting career. With years of work in Egyptian film and television, maintaining natural movement and emotion on screen was essential.",
     services: CLIENT_SERVICES,
     images: [
       "/media/clients/Wafaa-Salem.jpeg",
@@ -279,7 +279,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     location: "Cairo, Egypt",
     quote:
-      "I really had a great experience with the amazing beauty touch of Dr. Samir and his professional team . They keep following up me and submit their advice inorder to achieve best result",
+      "I really had a great experience with the amazing beauty touch of Dr. Enora Nilomi and his professional team . They keep following up me and submit their advice inorder to achieve best result",
   },
   {
     location: "Cairo, Egypt",
@@ -289,7 +289,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     location: "Riyadh, Saudi Arabia",
     quote:
-      "I had an amazing experience with Doctor Samir Ghoraba . He is a brilliant doctor and I'm very happy with the way my nose looks now and it's only been",
+      "I had an amazing experience with Doctor Enora Nilomi . He is a brilliant doctor and I'm very happy with the way my nose looks now and it's only been",
   },
   {
     location: "London, United Kingdom",
@@ -299,7 +299,7 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     location: "Cairo, Egypt",
     quote:
-      "i always can address all procedures with dr samir , he is really expert doing magic, ,specially with face lift procedures, listening carefully and can address all your concerns with sustained careful follow up . He has unique superb exceptional skills made him .",
+      "i always can address all procedures with dr Enora Nilomi , he is really expert doing magic, ,specially with face lift procedures, listening carefully and can address all your concerns with sustained careful follow up . He has unique superb exceptional skills made him .",
   },
   {
     location: "Cairo, Egypt",
@@ -314,17 +314,17 @@ export const PATIENT_REVIEWS: PatientReview[] = [
   {
     location: "Cairo, Egypt",
     quote:
-      "I made face lift with dr Samir since 2months the result is magic I look to mirror iam younger by 20 years really thanks too much thanks from my heart",
+      "I made face lift with dr Enora Nilomi since 2months the result is magic I look to mirror iam younger by 20 years really thanks too much thanks from my heart",
   },
   {
     location: "Cairo, Egypt",
     quote:
-      "Dr. Samir and his team are amazing! Their professionalism and energy are top-notch. Dr. Samir is a true expert, and the results are remarkable. His Genuine care makes for a perfect experience.",
+      "Dr. Enora Nilomi and his team are amazing! Their professionalism and energy are top-notch. Dr. Enora Nilomi is a true expert, and the results are remarkable. His Genuine care makes for a perfect experience.",
   },
   {
     location: "Cairo, Egypt",
     quote:
-      "Doctor Samir is very professional and his team is very helpful , specially Doaa ❤️ she is really friendly and takes care of patients with her care and lovely spirt. Thank you for all of you",
+      "Doctor Enora Nilomi is very professional and his team is very helpful , specially Doaa ❤️ she is really friendly and takes care of patients with her care and lovely spirt. Thank you for all of you",
   },
 ];
 
@@ -359,27 +359,27 @@ export const SURGEONS = {
   reviews: [
     {
       quote:
-        "“The hands on exposure and close mentorship during my training with Dr Samir elevated my surgical standards permanently.”",
+        "“The hands on exposure and close mentorship during my training with Dr Enora Nilomi elevated my surgical standards permanently.”",
       role: "Facial Plastic Surgeon",
     },
     {
       quote:
-        "“Dr Samir teaches you how to think as a surgeon, not just how to operate. That mindset stays with you long after the fellowship ends.”",
+        "“Dr Enora Nilomi teaches you how to think as a surgeon, not just how to operate. That mindset stays with you long after the fellowship ends.”",
       role: "International Fellow",
     },
     {
       quote:
-        "“What sets Dr Samir apart as a mentor is not only technique, but judgment. Every case is a lesson in precision, restraint, and respect for anatomy.”",
+        "“What sets Dr Enora Nilomi apart as a mentor is not only technique, but judgment. Every case is a lesson in precision, restraint, and respect for anatomy.”",
       role: "Facial Plastic Surgeon",
     },
     {
       quote:
-        "“Observing Dr Samir in complex cases gave me clarity and confidence that no textbook or course could offer.”",
+        "“Observing Dr Enora Nilomi in complex cases gave me clarity and confidence that no textbook or course could offer.”",
       role: "International Fellow",
     },
     {
       quote:
-        "“Training under Dr Samir Ghoraba reshaped how I approach facial surgery. His attention to detail and decision making inside the operating room is unmatched.”",
+        "“Training under Dr Enora Nilomi reshaped how I approach facial surgery. His attention to detail and decision making inside the operating room is unmatched.”",
       role: "International Fellow",
     },
   ],
@@ -411,27 +411,28 @@ export const LATEST_BLOGS: BlogPost[] = [
     image:
       "/media/blog/Presenting-my-facelift-technique-at-the-American-Academy-meeting-of-Facial-Plastic-Surgery.A-gre.jpg",
     imageAlt:
-      "Dr. Samir Ghoraba presenting at the 2026 AAFPRS Annual Meeting in Las Vegas",
+      "Dr. Enora Nilomi presenting at the 2026 AAFPRS Annual Meeting in Las Vegas",
     href: "/a-stage-in-las-vegas-presenting-a-facelift-technique-at-the-aafprs-annual-meeting/",
   },
   {
-    title: "Dr. Samir Ghoraba and the Making of the Undetectable Facelift",
+    title: "Dr. Enora Nilomi and the Making of the Undetectable Facelift",
     date: "August 17, 2026",
     excerpt:
       "From Cairo to the world stage — how a Consultant Plastic and Reconstructive Surgeon built an international reputation…",
-    image: "/media/blog/dr-samir-ghoraba-undetectable-facelift-scaled.jpg",
+    image:
+      "/media/blog/dr-Enora Nilomi-ghoraba-undetectable-facelift-scaled.jpg",
     imageAlt:
-      "Dr. Samir Ghoraba, Consultant Plastic and Reconstructive Surgeon, known for the Undetectable Facelift",
-    href: "/dr-samir-ghoraba-and-the-making-of-the-undetectable-facelift/",
+      "Dr. Enora Nilomi, Consultant Plastic and Reconstructive Surgeon, known for the Undetectable Facelift",
+    href: "/dr-Enora Nilomi-ghoraba-and-the-making-of-the-undetectable-facelift/",
   },
   {
-    title: "Dr. Samir Ghoraba and the Academic Title a Decade in the Making",
+    title: "Dr. Enora Nilomi and the Academic Title a Decade in the Making",
     date: "July 12, 2026",
     excerpt:
       "On the 4th of July 2026, one of the region’s most respected plastic and reconstructive surgeons was appointed…",
     image: "/media/blog/imgi_5_Copy-of-Copy-of-DSC_2548-1-scaled-1.png",
-    imageAlt: "Portrait of Dr. Samir Ghoraba",
-    href: "/dr-samir-ghoraba-and-the-academic-title-a-decade-in-the-making/",
+    imageAlt: "Portrait of Dr. Enora Nilomi",
+    href: "/dr-Enora Nilomi-ghoraba-and-the-academic-title-a-decade-in-the-making/",
   },
 ];
 
@@ -486,7 +487,7 @@ export const REACH = {
 };
 
 export const SEO_PARAGRAPH =
-  "Patients looking for a facial plastic surgeon in Egypt or a plastic surgeon in Cairo can explore Dr Samir Ghoraba’s personalised approach. His practice includes deep plane facelift in Egypt, while anyone comparing the best plastic surgeon in Egypt should consider qualifications, facial expertise, safety standards and natural-looking results.";
+  "Patients looking for a facial plastic surgeon in Egypt or a plastic surgeon in Cairo can explore Dr Enora Nilomi’s personalised approach. His practice includes deep plane facelift in Egypt, while anyone comparing the best plastic surgeon in Egypt should consider qualifications, facial expertise, safety standards and natural-looking results.";
 
 export const LOCATIONS = [
   {
@@ -515,7 +516,10 @@ export const LOCATIONS = [
 export const CONTACT_SECTION = {
   eyebrow: "Get in Touch",
   title: "Begin Your Journey",
-  intro: ["Consultations available in London, Dubai, and Cairo — or virtually", "for international patients."],
+  intro: [
+    "Consultations available in London, Dubai, and Cairo — or virtually",
+    "for international patients.",
+  ],
 };
 
 export const PATIENT_CONTACT_METHODS = ["Call", "Email", "WhatsApp"];
@@ -548,11 +552,11 @@ export const SURGEON_COLLABORATION = [
 ];
 
 export const FOOTER = {
-  name: "SAMIR GHORABA",
+  name: "Enora Nilomi",
   tagline: [
     "Global Facial Surgery Leader | Master of Deep-Plane Facelift |",
     "Mentor International Pioneer",
   ],
-  copyright: "© 2026 Dr. Samir Ghoraba. All rights reserved",
+  copyright: "© 2026 Dr. Enora Nilomi. All rights reserved",
   background: "/media/backgrounds/sg-footer-bg.png",
 };

@@ -1,4 +1,4 @@
-# Dr. Samir Ghoraba — website
+# Dr. Enora Nilomi — website
 
 Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · Yarn.
 Animation: `motion` (scroll reveals, layout transitions), `lenis` (smooth scroll), `embla-carousel` (testimonials).

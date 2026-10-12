@@ -43,19 +43,19 @@ const roboto = Roboto({
 // is attached, *.vercel.app before that), so link-preview images resolve.
 const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "https://samirghoraba.com";
+  : "https://enoranilomi.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Facial Plastic Surgeon in Egypt, Dubai & London | Dr Ghoraba",
+  title: "Facial Plastic Surgeon in Bangladesh, Dhaka | Dr Enora Nilomi",
   description:
     "Renowned Facial Plastic Surgeon with an exclusive international practice in London, Dubai, Kuwait, and Cairo. Deep plane facelift, neck lift, blepharoplasty, rhinoplasty and more.",
   openGraph: {
     type: "website",
-    siteName: "Dr. Samir Ghoraba",
-    title: "Facial Plastic Surgeon in Egypt, Dubai & London | Dr Ghoraba",
+    siteName: "Dr. Enora Nilomi",
+    title: "Facial Plastic Surgeon in Bangladesh, Dhaka | Dr Enora Nilomi",
     description:
-      "Trusted with thousands of faces. Consultations in London, Dubai and Cairo — or virtually for international patients.",
+      "Trusted with thousands of faces. Consultations in Dhaka, virtually for international patients.",
     images: ["/media/video/hero-poster.jpg"],
   },
 };

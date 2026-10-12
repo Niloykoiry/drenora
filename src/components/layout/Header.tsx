@@ -78,7 +78,7 @@ export default function Header() {
         <div className="relative hidden h-[100px] items-center justify-between px-[10px] md:flex">
           <Link
             href="/"
-            aria-label="Dr. Samir Ghoraba — home"
+            aria-label="Dr. Enora Nilomi — home"
             className="block size-[50px] transition-transform duration-700 ease-luxe hover:rotate-[10deg]"
           >
             <Image
@@ -140,7 +140,7 @@ export default function Header() {
         <div className="flex h-[70px] items-center justify-between p-[10px] md:hidden">
           <Link
             href="/"
-            aria-label="Dr. Samir Ghoraba — home"
+            aria-label="Dr. Enora Nilomi — home"
             className="block size-[50px]"
           >
             <Image
@@ -153,7 +153,7 @@ export default function Header() {
           </Link>
           <Link href="/" className="flex flex-col items-center text-center">
             <span className="font-display text-[17.16px] uppercase leading-none tracking-[2.73px] text-cream">
-              Samir Ghoraba
+              Enora Nilomi
             </span>
             <span className="mt-[5px] text-[9.75px] uppercase leading-none tracking-[1.365px] text-gold">
               Facial Plastic Surgeon
@@ -189,7 +189,13 @@ function MenuButton({ onClick }: { onClick: () => void }) {
 
 const ORIGIN = "calc(100% - 32px) 48px";
 
-function MenuOverlay({ open, onClose }: { open: boolean; onClose: () => void }) {
+function MenuOverlay({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
   return (
     <AnimatePresence>
       {open && (
@@ -229,37 +235,49 @@ function MenuOverlay({ open, onClose }: { open: boolean; onClose: () => void }) 
               animate="show"
               exit="hidden"
               variants={{
-                hidden: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
-                show: { transition: { staggerChildren: 0.055, delayChildren: 0.3 } },
+                hidden: {
+                  transition: { staggerChildren: 0.03, staggerDirection: -1 },
+                },
+                show: {
+                  transition: { staggerChildren: 0.055, delayChildren: 0.3 },
+                },
               }}
             >
               <nav aria-label="Menu" className="w-full max-w-[394px]">
                 <ul>
-                  {[...PRIMARY_NAV.map((l) => ({ ...l, primary: true })), ...MENU_NAV].map(
-                    (link) => (
-                      <motion.li
-                        key={link.label}
-                        className={clsx("overflow-hidden", "primary" in link && "lg:hidden")}
-                        variants={{
-                          hidden: { opacity: 0, y: 24 },
-                          show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-                        }}
+                  {[
+                    ...PRIMARY_NAV.map((l) => ({ ...l, primary: true })),
+                    ...MENU_NAV,
+                  ].map((link) => (
+                    <motion.li
+                      key={link.label}
+                      className={clsx(
+                        "overflow-hidden",
+                        "primary" in link && "lg:hidden",
+                      )}
+                      variants={{
+                        hidden: { opacity: 0, y: 24 },
+                        show: {
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.7, ease: EASE },
+                        },
+                      }}
+                    >
+                      <Link
+                        href={link.href}
+                        prefetch={false}
+                        onClick={onClose}
+                        className="group flex items-center gap-3 px-5 py-[10px] text-[20px] font-medium uppercase leading-5 text-white transition-colors duration-300 hover:text-gold"
                       >
-                        <Link
-                          href={link.href}
-                          prefetch={false}
-                          onClick={onClose}
-                          className="group flex items-center gap-3 px-5 py-[10px] text-[20px] font-medium uppercase leading-5 text-white transition-colors duration-300 hover:text-gold"
-                        >
-                          <span
-                            aria-hidden
-                            className="h-px w-0 bg-gold transition-[width] duration-500 ease-luxe group-hover:w-5"
-                          />
-                          {link.label}
-                        </Link>
-                      </motion.li>
-                    ),
-                  )}
+                        <span
+                          aria-hidden
+                          className="h-px w-0 bg-gold transition-[width] duration-500 ease-luxe group-hover:w-5"
+                        />
+                        {link.label}
+                      </Link>
+                    </motion.li>
+                  ))}
                 </ul>
               </nav>
 
@@ -268,7 +286,10 @@ function MenuOverlay({ open, onClose }: { open: boolean; onClose: () => void }) 
                 className="mt-[35px] block h-[2px] w-full origin-center bg-white"
                 variants={{
                   hidden: { scaleX: 0 },
-                  show: { scaleX: 1, transition: { duration: 0.9, ease: EASE } },
+                  show: {
+                    scaleX: 1,
+                    transition: { duration: 0.9, ease: EASE },
+                  },
                 }}
               />
 
@@ -276,7 +297,11 @@ function MenuOverlay({ open, onClose }: { open: boolean; onClose: () => void }) 
                 className="mt-[35px] font-display text-[22px] font-bold uppercase leading-none text-white"
                 variants={{
                   hidden: { opacity: 0, y: 16 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.7, ease: EASE },
+                  },
                 }}
               >
                 Follow Us
@@ -286,7 +311,11 @@ function MenuOverlay({ open, onClose }: { open: boolean; onClose: () => void }) 
                 className="mt-5"
                 variants={{
                   hidden: { opacity: 0, y: 16 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.7, ease: EASE },
+                  },
                 }}
               >
                 <SocialLinks />

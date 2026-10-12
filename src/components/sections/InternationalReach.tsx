@@ -1,6 +1,11 @@
 import Image from "next/image";
 import PauseOffscreen from "@/components/ui/PauseOffscreen";
-import { Reveal, SplitReveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  Reveal,
+  SplitReveal,
+  Stagger,
+  StaggerItem,
+} from "@/components/ui/Reveal";
 import { REACH, SEO_PARAGRAPH } from "@/data/site";
 
 /** sg-map-pinned.png is 1600×783. */
@@ -23,33 +28,42 @@ export default function InternationalReach() {
         </div>
 
         <div className="relative mx-[10px] mt-[30px] h-[294px] overflow-hidden [--map-h:294px] md:mx-0 md:h-[720px] md:[--map-h:720px]">
-          <Reveal y={0} duration={1.6} amount={0.1} className="absolute inset-0">
-           <PauseOffscreen className="absolute inset-0">
-            {/* Box sized like background-size: cover, so the pulses stay glued to the pins. */}
-            <div
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{
-                width: `max(100%, calc(var(--map-h) * ${MAP_RATIO}))`,
-                aspectRatio: `${MAP_RATIO}`,
-              }}
-            >
-              <Image
-                src={REACH.map}
-                alt="World map showing the countries Dr. Ghoraba's patients travel from"
-                fill
-                sizes="(max-width: 767px) 600px, 100vw"
-                className="object-cover"
-              />
-              {REACH.pins.map(([left, top], i) => (
-                <span
-                  key={i}
-                  aria-hidden
-                  className="absolute size-[18px] animate-pin-pulse rounded-full border border-gold/80 bg-gold/20 md:size-[22px]"
-                  style={{ left: `${left}%`, top: `${top}%`, animationDelay: `${(i % 6) * 0.4}s` }}
+          <Reveal
+            y={0}
+            duration={1.6}
+            amount={0.1}
+            className="absolute inset-0"
+          >
+            <PauseOffscreen className="absolute inset-0">
+              {/* Box sized like background-size: cover, so the pulses stay glued to the pins. */}
+              <div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                style={{
+                  width: `max(100%, calc(var(--map-h) * ${MAP_RATIO}))`,
+                  aspectRatio: `${MAP_RATIO}`,
+                }}
+              >
+                <Image
+                  src={REACH.map}
+                  alt="World map showing the countries Dr. Enora Nilomi's patients travel from"
+                  fill
+                  sizes="(max-width: 767px) 600px, 100vw"
+                  className="object-cover"
                 />
-              ))}
-            </div>
-           </PauseOffscreen>
+                {REACH.pins.map(([left, top], i) => (
+                  <span
+                    key={i}
+                    aria-hidden
+                    className="absolute size-[18px] animate-pin-pulse rounded-full border border-gold/80 bg-gold/20 md:size-[22px]"
+                    style={{
+                      left: `${left}%`,
+                      top: `${top}%`,
+                      animationDelay: `${(i % 6) * 0.4}s`,
+                    }}
+                  />
+                ))}
+              </div>
+            </PauseOffscreen>
           </Reveal>
           <div aria-hidden className="absolute inset-0 bg-ink/30" />
 
@@ -71,7 +85,9 @@ export default function InternationalReach() {
 
       <section className="mx-auto max-w-[1188px] px-6 pb-[50px] pt-6">
         <Reveal y={16}>
-          <p className="font-roboto text-[16px] leading-[1.65] text-[#7a7a7a]">{SEO_PARAGRAPH}</p>
+          <p className="font-roboto text-[16px] leading-[1.65] text-[#7a7a7a]">
+            {SEO_PARAGRAPH}
+          </p>
         </Reveal>
       </section>
     </>

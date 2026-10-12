@@ -55,7 +55,11 @@ export default function Hero() {
           poster={HERO.video.poster}
           className="size-full object-cover"
         >
-          <source media="(max-width: 767px)" src={HERO.video.mobile} type="video/mp4" />
+          <source
+            media="(max-width: 767px)"
+            src={HERO.video.mobile}
+            type="video/mp4"
+          />
           <source src={HERO.video.desktop} type="video/mp4" />
         </video>
       </motion.div>
