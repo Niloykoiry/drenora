@@ -5,9 +5,9 @@ import countries from "./countries.json";
 export const COUNTRIES: string[] = countries;
 
 export const CONTACT = {
-  phoneDisplay: "+971 54 555 4841",
-  phoneHref: "tel:+971545554841",
-  whatsappHref: "https://wa.me/971545554841",
+  phoneDisplay: "+880 1704-405338",
+  phoneHref: "tel:+8801704405338",
+  whatsappHref: "https://wa.me/8801704405338",
   consultationHref: "/request-a-consultation/",
 };
 
@@ -32,24 +32,24 @@ export const MENU_NAV: NavLink[] = [
   { label: "Request a Consultation", href: "/request-a-consultation/" },
 ];
 
-export type SocialKey = "instagram" | "whatsapp" | "tiktok" | "youtube";
+export type SocialKey = "instagram" | "whatsapp" | "facebook" | "thread";
 
 export const SOCIALS: { key: SocialKey; label: string; href: string }[] = [
   {
     key: "instagram",
     label: "Instagram",
-    href: "https://www.instagram.com/Enora Nilomi/?hl=en",
-  },
-  { key: "whatsapp", label: "WhatsApp", href: "https://wa.me/+971545554841" },
-  {
-    key: "tiktok",
-    label: "TikTok",
-    href: "https://www.tiktok.com/@dr.Enora Nilomi?lang=en",
+    href: "https://www.instagram.com/dr_enora_nilomi?fbclid=IwY2xjawU7GVBleHRuA2FlbQIxMABwZG9mAWJyaWQRMVFuclNHUVRDRGVPQTlXRW9zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEewh1WQJCHc34EJwHMQDlqX2OISD-kh4OWar8LJyT7YeYX23crwwQTP4Y5mxE_aem_UZ6jlibhLobb8yxStxqhCA",
   },
   {
-    key: "youtube",
-    label: "YouTube",
-    href: "https://www.youtube.com/@drEnora Nilomi",
+    key: "thread",
+    label: "Thread",
+    href: "https://www.threads.com/@dr_enora_nilomi?xmt=AQG0nVhJYN7Xt3yXaQ4p3rC5ymmd5cJkUVaCIvWrAX7E9uA",
+  },
+  { key: "whatsapp", label: "WhatsApp", href: "https://wa.me/+8801704405338" },
+  {
+    key: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61562100922452",
   },
 ];
 

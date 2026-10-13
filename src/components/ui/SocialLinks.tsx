@@ -1,13 +1,18 @@
 import clsx from "clsx";
 import type { IconType } from "react-icons";
-import { FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaThreads,
+  FaWhatsapp,
+} from "react-icons/fa6";
 import { SOCIALS, type SocialKey } from "@/data/site";
 
 const ICONS: Record<SocialKey, IconType> = {
+  facebook: FaFacebookF,
   instagram: FaInstagram,
+  thread: FaThreads,
   whatsapp: FaWhatsapp,
-  tiktok: FaTiktok,
-  youtube: FaYoutube,
 };
 
 /** Row of 40px outlined circles, as used in the menu and the footer. */

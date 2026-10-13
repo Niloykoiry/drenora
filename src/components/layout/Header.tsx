@@ -84,8 +84,8 @@ export default function Header() {
             <Image
               src="/media/brand/sg-logo-1.png"
               alt=""
-              width={50}
-              height={50}
+              width={60}
+              height={60}
               preload
             />
           </Link>
@@ -146,8 +146,8 @@ export default function Header() {
             <Image
               src="/media/brand/sg-logo-1.png"
               alt=""
-              width={50}
-              height={50}
+              width={60}
+              height={60}
               preload
             />
           </Link>
