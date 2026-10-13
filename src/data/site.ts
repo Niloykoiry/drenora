@@ -69,7 +69,7 @@ export const LANGUAGES = [
 export const HERO = {
   title: "Trusted With Thousands Of Faces",
   subtitle:
-    "Renowned Facial Plastic Surgeon with an exclusive international practice in London, Dubai, Kuwait, and Cairo.",
+    "Plastic surgeon with special interest in Head Neck reconstruction, Microsurgery, Craniofacial Surgery & Advanced Aesthectic Surgey.",
   video: {
     desktop: "/media/video/hero-1080.mp4",
     mobile: "/media/video/hero-720.mp4",
@@ -552,8 +552,7 @@ export const SURGEON_COLLABORATION = [
 export const FOOTER = {
   name: "Enora Nilomi",
   tagline: [
-    "Global Facial Surgery Leader | Master of Deep-Plane Facelift |",
-    "Mentor International Pioneer",
+    "Plastic, Reconstructive & Aesthetic Surgeon | Head Neck reconstruction | Microsurgery, Craniofacial Surgery & Advanced Aesthectic Surgery |",
   ],
   copyright: "© 2026 Dr. Enora Nilomi. All rights reserved",
   background: "/media/backgrounds/sg-footer-bg.png",

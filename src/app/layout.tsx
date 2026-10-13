@@ -47,15 +47,17 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Facial Plastic Surgeon in Bangladesh, Dhaka | Dr Enora Nilomi",
+  title:
+    "Plastic, Reconstructive & Aesthetic Surgeon Dhaka, Bangladesh | Dr Enora Nilomi",
   description:
-    "Renowned Facial Plastic Surgeon with an exclusive international practice in London, Dubai, Kuwait, and Cairo. Deep plane facelift, neck lift, blepharoplasty, rhinoplasty and more.",
+    "Plastic surgeon with special interest in Head Neck reconstruction, Microsurgery, Craniofacial Surgery & Advanced Aesthectic Surgey",
   openGraph: {
     type: "website",
     siteName: "Dr. Enora Nilomi",
-    title: "Facial Plastic Surgeon in Bangladesh, Dhaka | Dr Enora Nilomi",
+    title:
+      "Plastic, Reconstructive & Aesthetic Surgeon Dhaka, Bangladesh | Dr Enora Nilomi",
     description:
-      "Trusted with thousands of faces. Consultations in Dhaka, virtually for international patients.",
+      "Plastic surgeon with special interest in Head Neck reconstruction, Microsurgery, Craniofacial Surgery & Advanced Aesthectic Surgey",
     images: ["/media/video/hero-poster.jpg"],
   },
 };
