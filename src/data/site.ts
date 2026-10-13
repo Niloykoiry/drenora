@@ -38,18 +38,18 @@ export const SOCIALS: { key: SocialKey; label: string; href: string }[] = [
   {
     key: "instagram",
     label: "Instagram",
-    href: "https://www.instagram.com/Enora Nilomighoraba/?hl=en",
+    href: "https://www.instagram.com/Enora Nilomi/?hl=en",
   },
   { key: "whatsapp", label: "WhatsApp", href: "https://wa.me/+971545554841" },
   {
     key: "tiktok",
     label: "TikTok",
-    href: "https://www.tiktok.com/@dr.Enora Nilomighoraba?lang=en",
+    href: "https://www.tiktok.com/@dr.Enora Nilomi?lang=en",
   },
   {
     key: "youtube",
     label: "YouTube",
-    href: "https://www.youtube.com/@drEnora Nilomighoraba",
+    href: "https://www.youtube.com/@drEnora Nilomi",
   },
 ];
 
@@ -219,7 +219,7 @@ export const STATE_OF_ART = {
     "Precision, innovation, and artistry combined to deliver natural, refined, and long-lasting results tailored to every individual face.",
   // Pre-converted to grayscale (same weights as CSS grayscale()) so the moving
   // parallax layer doesn't need a live filter.
-  background: "/media/backgrounds/state-of-art-gray.jpg",
+  background: "/media/backgrounds/background-01.jpg",
   rows: [
     [
       {
@@ -340,7 +340,7 @@ export const SURGEONS = {
   title: "strive for surgical supremacy",
   subtitle:
     "True mastery is not achieved by chance. It is earned through precision, discipline, and relentless pursuit of excellence. This is a platform for surgeons who refuse to stand still.",
-  background: "/media/backgrounds/DSC01219-Mejorado-NR-scaled.jpg",
+  background: "/media/backgrounds/background-02.jpg",
   programs: [
     {
       title: "fellowship program",
@@ -408,8 +408,7 @@ export const LATEST_BLOGS: BlogPost[] = [
     date: "September 27, 2026",
     excerpt:
       "Each September, the American Academy of Facial Plastic and Reconstructive Surgery gathers the specialty in one place. It…",
-    image:
-      "/media/blog/Presenting-my-facelift-technique-at-the-American-Academy-meeting-of-Facial-Plastic-Surgery.A-gre.jpg",
+    image: "/media/blog/DrEnoraPresentation.jpg",
     imageAlt:
       "Dr. Enora Nilomi presenting at the 2026 AAFPRS Annual Meeting in Las Vegas",
     href: "/a-stage-in-las-vegas-presenting-a-facelift-technique-at-the-aafprs-annual-meeting/",
@@ -419,8 +418,7 @@ export const LATEST_BLOGS: BlogPost[] = [
     date: "August 17, 2026",
     excerpt:
       "From Cairo to the world stage — how a Consultant Plastic and Reconstructive Surgeon built an international reputation…",
-    image:
-      "/media/blog/dr-Enora Nilomi-ghoraba-undetectable-facelift-scaled.jpg",
+    image: "/media/blog/DrEnora-01.jpg",
     imageAlt:
       "Dr. Enora Nilomi, Consultant Plastic and Reconstructive Surgeon, known for the Undetectable Facelift",
     href: "/dr-Enora Nilomi-ghoraba-and-the-making-of-the-undetectable-facelift/",
@@ -430,7 +428,7 @@ export const LATEST_BLOGS: BlogPost[] = [
     date: "July 12, 2026",
     excerpt:
       "On the 4th of July 2026, one of the region’s most respected plastic and reconstructive surgeons was appointed…",
-    image: "/media/blog/imgi_5_Copy-of-Copy-of-DSC_2548-1-scaled-1.png",
+    image: "/media/blog/DrEnora-02.jpg",
     imageAlt: "Portrait of Dr. Enora Nilomi",
     href: "/dr-Enora Nilomi-ghoraba-and-the-academic-title-a-decade-in-the-making/",
   },

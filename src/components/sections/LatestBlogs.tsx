@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import GlassButton from "@/components/ui/GlassButton";
-import { Reveal, SplitReveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  Reveal,
+  SplitReveal,
+  Stagger,
+  StaggerItem,
+} from "@/components/ui/Reveal";
 import { BLOGS_CTA, LATEST_BLOGS } from "@/data/site";
 
 export default function LatestBlogs() {
@@ -24,14 +29,14 @@ export default function LatestBlogs() {
                 prefetch={false}
                 tabIndex={-1}
                 aria-hidden
-                className="relative block h-[240px] overflow-hidden md:h-[350px]"
+                className="relative block h-[380px] overflow-hidden md:h-[520px]"
               >
                 <Image
                   src={post.image}
                   alt={post.imageAlt}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 458px"
-                  className="object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-[1.05]"
+                  className="h-full w-full object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-[1.05]"
                 />
               </Link>
               <div className="flex flex-1 flex-col border-t border-[#2a2a2a] px-6 pb-[26px] pt-6">
