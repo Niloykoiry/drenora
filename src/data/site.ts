@@ -115,6 +115,47 @@ export const FOUNDER_OF: Logo[] = [
   },
 ];
 
+export const ABOUT_PAGE = {
+  hero: {
+    title: "About Dr. Enora Nilomi",
+    subtitle: "Plastic & Reconstructive Surgeon",
+    image: "/media/backgrounds/background-01.jpg",
+    imageAlt: "A plastic surgeon working in an operating theatre",
+  },
+  profile: {
+    eyebrow: "The surgeon",
+    title: "A thoughtful approach to surgery",
+    image: "/media/blog/DrEnoraPresentation.jpg",
+    imageAlt: "Dr. Enora Nilomi presenting at a professional meeting",
+    paragraphs: [
+      "Dr. Enora Nilomi is a plastic and reconstructive surgeon with clinical interests in head and neck reconstruction, microsurgery, craniofacial surgery, and aesthetic surgery.",
+      "A considered consultation starts with listening: understanding each person's concerns, goals, and medical context before discussing suitable options.",
+    ],
+  },
+  approachTitle: "Why choose Dr. Enora Nilomi?",
+  approaches: [
+    {
+      title: "Individualized planning",
+      description:
+        "Every person brings different priorities. Consultations focus on understanding those goals and discussing options in a clear, considered way.",
+    },
+    {
+      title: "A broad clinical perspective",
+      description:
+        "Interests across reconstructive and aesthetic surgery inform a careful perspective on facial structure, function, and individual needs.",
+    },
+    {
+      title: "International care",
+      description:
+        "Consultations are available in London, Dubai, and Cairo, with virtual consultations for international patients.",
+    },
+  ],
+  affiliationsTitle: "Professional recognitions",
+  affiliationsIntro:
+    "A selection of professional organizations and institutions associated with Dr. Enora Nilomi.",
+  articlesTitle: "Read more",
+};
+
 export const RESULTS = {
   title: "The Best Facelift Results",
   cities: ["Dubai", "London", "Cairo"],
@@ -396,6 +437,7 @@ export type BlogPost = {
   title: string;
   date: string;
   excerpt: string;
+  details: { heading: string; paragraphs: string[] }[];
   image: string;
   imageAlt: string;
   href: string;
@@ -408,6 +450,20 @@ export const LATEST_BLOGS: BlogPost[] = [
     date: "September 27, 2026",
     excerpt:
       "Each September, the American Academy of Facial Plastic and Reconstructive Surgery gathers the specialty in one place. It…",
+    details: [
+      {
+        heading: "The annual meeting",
+        paragraphs: [
+          "Each September, the AAFPRS Annual Meeting brings facial plastic and reconstructive surgeons together. In 2026, Dr. Enora Nilomi presented a facelift technique at the meeting in Las Vegas.",
+        ],
+      },
+      {
+        heading: "A moment to share ideas",
+        paragraphs: [
+          "This feature looks back at the presentation and the professional exchange around facial surgery. It offers readers a closer look at the event and the work behind sharing a technique with peers.",
+        ],
+      },
+    ],
     image: "/media/blog/DrEnoraPresentation.jpg",
     imageAlt:
       "Dr. Enora Nilomi presenting at the 2026 AAFPRS Annual Meeting in Las Vegas",
@@ -418,6 +474,20 @@ export const LATEST_BLOGS: BlogPost[] = [
     date: "August 17, 2026",
     excerpt:
       "From Cairo to the world stage — how a Consultant Plastic and Reconstructive Surgeon built an international reputation…",
+    details: [
+      {
+        heading: "From Cairo to an international audience",
+        paragraphs: [
+          "This profile follows Dr. Enora Nilomi's professional journey and the ideas behind the phrase “undetectable facelift.”",
+        ],
+      },
+      {
+        heading: "A personal approach",
+        paragraphs: [
+          "The article explores an approach that aims to respect each person's features and goals. Every patient's situation is different, so treatment options and expected outcomes should be discussed individually with a qualified clinician.",
+        ],
+      },
+    ],
     image: "/media/blog/DrEnora-01.jpg",
     imageAlt:
       "Dr. Enora Nilomi, Consultant Plastic and Reconstructive Surgeon, known for the Undetectable Facelift",
@@ -428,6 +498,20 @@ export const LATEST_BLOGS: BlogPost[] = [
     date: "July 12, 2026",
     excerpt:
       "On the 4th of July 2026, one of the region’s most respected plastic and reconstructive surgeons was appointed…",
+    details: [
+      {
+        heading: "A decade-long milestone",
+        paragraphs: [
+          "On July 4, 2026, Dr. Enora Nilomi reached an academic milestone after a decade-long journey. This article revisits the appointment and what it represents in his professional life.",
+        ],
+      },
+      {
+        heading: "The work behind the achievement",
+        paragraphs: [
+          "The feature reflects on the learning, dedication, and persistence behind a long-term goal, and the continued commitment to a career in plastic and reconstructive surgery.",
+        ],
+      },
+    ],
     image: "/media/blog/DrEnora-02.jpg",
     imageAlt: "Portrait of Dr. Enora Nilomi",
     href: "/dr-Enora Nilomi-ghoraba-and-the-academic-title-a-decade-in-the-making/",
@@ -483,6 +567,29 @@ export const REACH = {
     [87.3, 78.2],
   ] as [number, number][],
 };
+
+export const FAQS = [
+  {
+    question: "Can I arrange a consultation before traveling?",
+    answer:
+      "Yes. International patients can begin with a virtual consultation to discuss their goals and possible next steps.",
+  },
+  {
+    question: "Where are consultations available?",
+    answer:
+      "Consultations are available in London, Dubai, and Cairo. Share your preferred location when you get in touch.",
+  },
+  {
+    question: "What should I include in my enquiry?",
+    answer:
+      "Let the team know what you would like to discuss, your preferred location, and any timing constraints. They can guide you on what information to share next.",
+  },
+  {
+    question: "How long should I plan to stay after a procedure?",
+    answer:
+      "The timing depends on the procedure and your individual recovery. Confirm a personalized follow-up and travel plan with your surgeon before booking.",
+  },
+];
 
 export const SEO_PARAGRAPH =
   "Patients looking for a facial plastic surgeon in Egypt or a plastic surgeon in Cairo can explore Dr Enora Nilomi’s personalised approach. His practice includes deep plane facelift in Egypt, while anyone comparing the best plastic surgeon in Egypt should consider qualifications, facial expertise, safety standards and natural-looking results.";

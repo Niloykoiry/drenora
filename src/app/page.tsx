@@ -1,4 +1,5 @@
 import Contact from "@/components/sections/Contact";
+import Faq from "@/components/sections/Faq";
 import FaceliftResults from "@/components/sections/FaceliftResults";
 import Hero from "@/components/sections/Hero";
 import InternationalReach from "@/components/sections/InternationalReach";
@@ -17,6 +18,7 @@ export default function Home() {
       <Surgeons />
       <LatestBlogs />
       <InternationalReach />
+      <Faq />
       <Contact />
     </main>
   );

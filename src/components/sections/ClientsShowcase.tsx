@@ -18,7 +18,19 @@ import { CLIENTS, RESULTS, type Client } from "@/data/site";
 
 export default function ClientsShowcase() {
   const [active, setActive] = useState(0);
+  const [selectedResult, setSelectedResult] = useState<{
+    client: Client;
+    image: string;
+  } | null>(null);
+  const resultDialogRef = useRef<HTMLDialogElement>(null);
   const client = CLIENTS[active];
+
+  useEffect(() => {
+    const dialog = resultDialogRef.current;
+    if (selectedResult && dialog && !dialog.open) {
+      dialog.showModal();
+    }
+  }, [selectedResult]);
 
   return (
     <div className="flex w-full flex-col gap-10 md:gap-[60px]">
@@ -110,9 +122,112 @@ export default function ClientsShowcase() {
           exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
           transition={{ duration: 0.55, ease: EASE }}
         >
-          <ClientTrack client={client} />
+          <ClientTrack
+            client={client}
+            onImageSelect={(selectedClient, image) =>
+              setSelectedResult({ client: selectedClient, image })
+            }
+          />
         </motion.div>
       </AnimatePresence>
+
+      <dialog
+        ref={resultDialogRef}
+        aria-labelledby="result-dialog-title"
+        aria-describedby="result-dialog-brief"
+        data-lenis-prevent
+        onClose={() => setSelectedResult(null)}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            event.preventDefault();
+            resultDialogRef.current?.close();
+          }
+        }}
+        onClick={(event) => {
+          if (event.target === resultDialogRef.current) {
+            resultDialogRef.current?.close();
+          }
+        }}
+        className="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none overflow-y-auto border-0 bg-black/80 p-4 text-snow md:p-8"
+      >
+        {selectedResult && (
+          <article className="relative mx-auto my-2 grid w-full max-w-[1000px] overflow-hidden border border-white/10 bg-ink-2 shadow-[0_24px_80px_rgba(0,0,0,0.55)] md:my-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+            <div className="relative min-h-[300px] bg-ink md:min-h-[560px]">
+              <Image
+                src={selectedResult.image}
+                alt={`${selectedResult.client.name} case image`}
+                fill
+                sizes="(max-width: 767px) 100vw, 550px"
+                className="object-cover"
+              />
+              <button
+                type="button"
+                aria-label="Close result details"
+                onClick={() => resultDialogRef.current?.close()}
+                className="absolute right-4 top-4 grid size-11 place-items-center rounded-full border border-white/20 bg-black/60 text-[26px] leading-none text-white transition-colors hover:border-gold hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                <span aria-hidden>×</span>
+              </button>
+            </div>
+
+            <div className="flex flex-col p-6 md:p-8">
+              <p className="text-[10px] uppercase leading-[1.4] tracking-[1.4px] text-gold">
+                Patient case
+              </p>
+              <h2
+                id="result-dialog-title"
+                className="mt-2 font-display text-[25px] font-medium leading-[1.2] text-white md:text-[32px]"
+              >
+                {selectedResult.client.name}
+              </h2>
+              <p className="mt-1 text-[14px] leading-[1.5] text-[#c5beb4]">
+                {selectedResult.client.role}
+              </p>
+              <div className="mt-6">
+                <h3 className="font-display text-[17px] font-medium text-cream">
+                  Case overview
+                </h3>
+                <p
+                  id="result-dialog-brief"
+                  className="mt-2 text-[14px] leading-[1.75] text-[#a8a29a]"
+                >
+                  {selectedResult.client.brief}
+                </p>
+              </div>
+
+              <div className="mt-auto pt-8">
+                <p className="text-[10px] uppercase leading-[1.4] tracking-[1.4px] text-[#8a857d]">
+                  Case images
+                </p>
+                <div className="mt-3 grid grid-cols-3 gap-2">
+                  {selectedResult.client.images.map((image, index) => (
+                    <button
+                      key={image}
+                      type="button"
+                      aria-label={`View ${selectedResult.client.name} case image ${index + 1}`}
+                      aria-pressed={selectedResult.image === image}
+                      onClick={() =>
+                        setSelectedResult((current) =>
+                          current ? { ...current, image } : current,
+                        )
+                      }
+                      className="relative aspect-[4/3] overflow-hidden border border-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold aria-pressed:border-gold"
+                    >
+                      <Image
+                        src={image}
+                        alt=""
+                        fill
+                        sizes="(max-width: 767px) 30vw, 140px"
+                        className="object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </article>
+        )}
+      </dialog>
     </div>
   );
 }
@@ -126,7 +241,13 @@ const LOOP_SECONDS = 25;
  * Infinite auto-scrolling track that pauses on hover and can be dragged
  * (with a wrap-around so dragging never hits an edge).
  */
-function ClientTrack({ client }: { client: Client }) {
+function ClientTrack({
+  client,
+  onImageSelect,
+}: {
+  client: Client;
+  onImageSelect: (client: Client, image: string) => void;
+}) {
   const setRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   // No per-frame work at all while the track is off screen.
@@ -178,7 +299,12 @@ function ClientTrack({ client }: { client: Client }) {
 
   const items = [
     { kind: "brief" as const, key: "brief" },
-    ...client.images.map((src, i) => ({ kind: "image" as const, key: `${src}-${i}`, src })),
+    ...client.images.map((src, i) => ({
+      kind: "image" as const,
+      key: `${src}-${i}`,
+      src,
+      index: i,
+    })),
   ];
 
   return (
@@ -211,20 +337,25 @@ function ClientTrack({ client }: { client: Client }) {
               item.kind === "brief" ? (
                 <BriefCard key={item.key} client={client} hidden={copy > 0} />
               ) : (
-                <div
+                <button
                   key={item.key}
-                  className="group relative h-[355px] w-[312px] shrink-0 overflow-hidden rounded-[14px] bg-ink-2 md:h-[450px] md:w-[420px]"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-label={`View ${client.name} case image ${item.index + 1}`}
+                  tabIndex={copy > 0 ? -1 : undefined}
+                  onClick={() => onImageSelect(client, item.src)}
+                  className="group relative h-[355px] w-[312px] shrink-0 overflow-hidden rounded-[14px] bg-ink-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold md:h-[450px] md:w-[420px]"
                 >
                   <Image
                     src={item.src}
-                    alt={copy > 0 ? "" : `${client.name} — result`}
+                    alt=""
                     fill
                     draggable={false}
                     sizes="(max-width: 767px) 312px, 420px"
                     className="object-cover transition-transform duration-[1.4s] ease-luxe group-hover:scale-[1.06]"
                   />
-                  <div className="pointer-events-none absolute inset-0 rounded-[14px] ring-1 ring-inset ring-white/5" />
-                </div>
+                  <span className="pointer-events-none absolute inset-0 rounded-[14px] ring-1 ring-inset ring-white/5" />
+                </button>
               ),
             )}
           </div>
